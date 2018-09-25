@@ -6,6 +6,8 @@ SensorConfig::SensorConfig(QWidget *parent) :
     ui(new Ui::SensorConfig)
 {
     ui->setupUi(this);
+    setWindowTitle(tr("sensor configure"));
+    setWindowIcon(QIcon(":/images/icon"));
 }
 
 SensorConfig::~SensorConfig()
