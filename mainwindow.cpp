@@ -10,11 +10,12 @@ MainWindow::MainWindow(QWidget *parent) :
     setWindowTitle(tr("IHV assistant"));
     setWindowIcon(QIcon(":/images/icon"));
 
-    mSensorConfig = NULL;
+    mSensorConfig = new SensorConfig();
 }
 
 MainWindow::~MainWindow()
 {
+    delete mSensorConfig;
     delete ui;
 }
 
@@ -22,9 +23,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_btn_sensor_configure_clicked()
 {
-    if (mSensorConfig == NULL) {
-        mSensorConfig = new SensorConfig();
+    if (mSensorConfig->isVisible()) {
+        mSensorConfig->close();
+        goto done;
     }
-
     mSensorConfig->show();
+done:
+    return;
 }

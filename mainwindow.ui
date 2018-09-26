@@ -114,6 +114,9 @@
        </item>
        <item>
         <widget class="QPushButton" name="btn_sensor_configure">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string>configure...</string>
          </property>
@@ -145,6 +148,9 @@
        </item>
        <item>
         <widget class="QPushButton" name="btn_eeprom_configure">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string>configure...</string>
          </property>
@@ -176,6 +182,9 @@
        </item>
        <item>
         <widget class="QPushButton" name="btn_actuator_configure">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string>configure...</string>
          </property>
@@ -207,6 +216,9 @@
        </item>
        <item>
         <widget class="QPushButton" name="btn_pdaf_configure">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string>configure...</string>
          </property>
@@ -238,6 +250,9 @@
        </item>
        <item>
         <widget class="QPushButton" name="btn_module_configure">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string>configure...</string>
          </property>
@@ -259,6 +274,9 @@
     <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
       <widget class="QPushButton" name="pushButton">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="text">
         <string>report</string>
        </property>
@@ -279,6 +297,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_2">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="text">
         <string>cancel</string>
        </property>
@@ -293,7 +314,7 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>23</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

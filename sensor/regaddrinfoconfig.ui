@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SensorConfig</class>
- <widget class="QWidget" name="SensorConfig">
+ <class>RegAddrInfoConfig</class>
+ <widget class="QWidget" name="RegAddrInfoConfig">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>500</height>
+    <width>300</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>400</width>
-    <height>500</height>
+    <width>300</width>
+    <height>400</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>400</width>
-    <height>500</height>
+    <width>300</width>
+    <height>400</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -28,38 +28,38 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(114, 159, 207);</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>50</y>
-     <width>251</width>
+     <x>60</x>
+     <y>10</y>
+     <width>181</width>
      <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 25 28pt &quot;Microsoft YaHei UI Light&quot;;</string>
+    <string notr="true">font: 28pt &quot;Sans Serif&quot;;</string>
    </property>
    <property name="text">
-    <string>sensor configure</string>
+    <string>regAddrInfo</string>
    </property>
   </widget>
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>71</x>
-     <y>102</y>
-     <width>251</width>
-     <height>361</height>
+     <x>10</x>
+     <y>70</y>
+     <width>281</width>
+     <height>321</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,3">
       <item>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="label">
         <property name="text">
-         <string>slaveInfo</string>
+         <string>xOutput</string>
         </property>
        </widget>
       </item>
@@ -77,23 +77,16 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="btn_slaveInfo">
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="text">
-         <string>configure...</string>
-        </property>
-       </widget>
+       <widget class="QLineEdit" name="le_xOutput"/>
       </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1,3">
       <item>
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>regAddrInfo</string>
+         <string>yOutput</string>
         </property>
        </widget>
       </item>
@@ -111,23 +104,16 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="btn_regAddrInfo">
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="text">
-         <string>configure...</string>
-        </property>
-       </widget>
+       <widget class="QLineEdit" name="le_yOutput"/>
       </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1,8">
       <item>
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>resolutionInfo</string>
+         <string>frameLengthLines</string>
         </property>
        </widget>
       </item>
@@ -145,23 +131,16 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="btn_resolutionInfo">
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="text">
-         <string>configure...</string>
-        </property>
-       </widget>
+       <widget class="QLineEdit" name="le_frameLengthLines"/>
       </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1,30">
       <item>
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>exposureControlInfo</string>
+         <string>lineLengthPixelClock</string>
         </property>
        </widget>
       </item>
@@ -179,23 +158,16 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="btn_exposureControlInfo">
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="text">
-         <string>configure...</string>
-        </property>
-       </widget>
+       <widget class="QLineEdit" name="le_lineLengthPixelClock"/>
       </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,1,25">
       <item>
-       <widget class="QLabel" name="label_6">
+       <widget class="QLabel" name="label_5">
         <property name="text">
-         <string>streamOn/Off</string>
+         <string>coarseIntgTimeAddr</string>
         </property>
        </widget>
       </item>
@@ -213,23 +185,16 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="btn_stream">
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="text">
-         <string>configure...</string>
-        </property>
-       </widget>
+       <widget class="QLineEdit" name="le_coarseIntgTimeAddr"/>
       </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,1,5">
       <item>
        <widget class="QLabel" name="label_7">
         <property name="text">
-         <string>groupHoldOn/Off</string>
+         <string>globalGainAddr</string>
         </property>
        </widget>
       </item>
@@ -247,23 +212,43 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="btn_groupHold">
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="text">
-         <string>configure...</string>
-        </property>
-       </widget>
+       <widget class="QLineEdit" name="le_globalGainAddr"/>
       </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_8">
+     <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="1,1,7">
+      <item>
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>testPatternRAddr</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_7">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="le_testPatternRAddr"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="1,1,10">
       <item>
        <widget class="QLabel" name="label_9">
         <property name="text">
-         <string>testPatternInfo</string>
+         <string>testPatternGRAddr</string>
         </property>
        </widget>
       </item>
@@ -281,54 +266,66 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="btn_testPatternInfo">
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="text">
-         <string>configure...</string>
-        </property>
-       </widget>
+       <widget class="QLineEdit" name="le_testPatternGRAddr"/>
       </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0,7,1">
+     <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="1,1,7">
       <item>
-       <widget class="QLabel" name="label_8">
+       <widget class="QLabel" name="label_10">
         <property name="text">
-         <string>initSettings</string>
+         <string>testPatternBAddr</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="le_initsetting"/>
+       <spacer name="horizontalSpacer_9">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="btn_initSettings">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
+       <widget class="QLineEdit" name="le_testPatternBAddr"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="1,1,10">
+      <item>
+       <widget class="QLabel" name="label_11">
         <property name="text">
-         <string>load...</string>
+         <string>testPatternGBAddr</string>
         </property>
        </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_10">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="le_testPatternGBAddr"/>
       </item>
      </layout>
     </item>
    </layout>
   </widget>
-  <zorder>label</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>layoutWidget</zorder>
-  <zorder>label_8</zorder>
-  <zorder>layoutWidget_2</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -27,15 +27,36 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    sensor/sensorconfig.cpp
+    sensor/sensorconfig.cpp \
+    sensor/slaveinfoconfig.cpp \
+    sensor/regaddrinfoconfig.cpp \
+    sensor/resolutioninfoconfig.cpp \
+    sensor/exposurecontrolinfoconfig.cpp \
+    sensor/streamsettingconfig.cpp \
+    sensor/groupholdconfig.cpp \
+    sensor/testpatterninfoconfig.cpp
 
 HEADERS += \
         mainwindow.h \
-    sensor/sensorconfig.h
+    sensor/sensorconfig.h \
+    sensor/slaveinfoconfig.h \
+    sensor/regaddrinfoconfig.h \
+    sensor/resolutioninfoconfig.h \
+    sensor/exposurecontrolinfoconfig.h \
+    sensor/streamsettingconfig.h \
+    sensor/groupholdconfig.h \
+    sensor/testpatterninfoconfig.h
 
 FORMS += \
         mainwindow.ui \
-    sensor/sensorconfig.ui
+    sensor/sensorconfig.ui \
+    sensor/slaveinfoconfig.ui \
+    sensor/regaddrinfoconfig.ui \
+    sensor/resolutioninfoconfig.ui \
+    sensor/exposurecontrolinfoconfig.ui \
+    sensor/streamsettingconfig.ui \
+    sensor/groupholdconfig.ui \
+    sensor/testpatterninfoconfig.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
