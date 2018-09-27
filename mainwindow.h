@@ -35,6 +35,10 @@ private slots:
 
     void on_btn_module_configure_clicked();
 
+    void on_btn_check_clicked();
+
+    void on_btn_cancel_gcdb_clicked();
+
 private:
     Ui::MainWindow *ui;
     SensorConfig *mSensorConfig;

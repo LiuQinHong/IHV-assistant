@@ -91,3 +91,14 @@ void MainWindow::on_btn_cancel_clicked()
 }
 
 
+/* GCDB check */
+void MainWindow::on_btn_check_clicked()
+{
+
+}
+
+/* GCDB cancel */
+void MainWindow::on_btn_cancel_gcdb_clicked()
+{
+    close();
+}
