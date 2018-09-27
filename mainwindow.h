@@ -5,6 +5,8 @@
 #include <sensor/sensorconfig.h>
 #include <eeprom/eepromconfig.h>
 #include <actuator/actuatorconfig.h>
+#include <pdaf/pdafconfig.h>
+#include <module/moduleconfig.h>
 
 namespace Ui {
 class MainWindow;
@@ -29,11 +31,17 @@ private slots:
 
     void on_btn_actuator_configure_clicked();
 
+    void on_btn_pdaf_configure_clicked();
+
+    void on_btn_module_configure_clicked();
+
 private:
     Ui::MainWindow *ui;
     SensorConfig *mSensorConfig;
     EepromConfig *mEepromConfig;
     ActuatorConfig *mActuatorConfig;
+    PdafConfig *mPdafConfig;
+    ModuleConfig *mModuleConfig;
 };
 
 #endif // MAINWINDOW_H

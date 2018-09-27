@@ -13,6 +13,8 @@ MainWindow::MainWindow(QWidget *parent) :
     mSensorConfig = new SensorConfig();
     mEepromConfig = new EepromConfig();
     mActuatorConfig = new ActuatorConfig();
+    mPdafConfig = new PdafConfig();
+    mModuleConfig = new ModuleConfig();
 }
 
 MainWindow::~MainWindow()
@@ -20,6 +22,8 @@ MainWindow::~MainWindow()
     delete mSensorConfig;
     delete mEepromConfig;
     delete mActuatorConfig;
+    delete mPdafConfig;
+    delete mModuleConfig;
     delete ui;
 }
 
@@ -54,8 +58,25 @@ void MainWindow::on_btn_actuator_configure_clicked()
     mActuatorConfig->show();
 }
 
+/* pdaf config */
+void MainWindow::on_btn_pdaf_configure_clicked()
+{
+    if (mPdafConfig->isVisible()) {
+        mPdafConfig->close();
+        return;
+    }
+    mPdafConfig->show();
+}
 
-
+/* module config */
+void MainWindow::on_btn_module_configure_clicked()
+{
+    if (mModuleConfig->isVisible()) {
+        mModuleConfig->close();
+        return;
+    }
+    mModuleConfig->show();
+}
 
 /* report */
 void MainWindow::on_btn_report_clicked()
@@ -68,3 +89,5 @@ void MainWindow::on_btn_cancel_clicked()
 {
     close();
 }
+
+
