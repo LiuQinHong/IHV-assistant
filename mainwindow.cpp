@@ -11,23 +11,48 @@ MainWindow::MainWindow(QWidget *parent) :
     setWindowIcon(QIcon(":/images/icon"));
 
     mSensorConfig = new SensorConfig();
+    mEepromConfig = new EepromConfig();
 }
 
 MainWindow::~MainWindow()
 {
     delete mSensorConfig;
+    delete mEepromConfig;
     delete ui;
 }
 
 
-
+/* sensor config */
 void MainWindow::on_btn_sensor_configure_clicked()
 {
     if (mSensorConfig->isVisible()) {
         mSensorConfig->close();
-        goto done;
+        return;
     }
     mSensorConfig->show();
-done:
-    return;
 }
+
+/* eeprom config */
+void MainWindow::on_btn_eeprom_configure_clicked()
+{
+    if (mEepromConfig->isVisible()) {
+        mEepromConfig->close();
+        return;
+    }
+    mEepromConfig->show();
+}
+
+
+/* report */
+void MainWindow::on_btn_report_clicked()
+{
+
+}
+
+/* cancel */
+void MainWindow::on_btn_cancel_clicked()
+{
+    close();
+}
+
+

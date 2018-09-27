@@ -34,7 +34,15 @@ SOURCES += \
     sensor/exposurecontrolinfoconfig.cpp \
     sensor/streamsettingconfig.cpp \
     sensor/groupholdconfig.cpp \
-    sensor/testpatterninfoconfig.cpp
+    sensor/testpatterninfoconfig.cpp \
+    eeprom/eepromconfig.cpp \
+    eeprom/eepromslaveinfoconfig.cpp \
+    eeprom/memorymap.cpp \
+    eeprom/eepromaf.cpp \
+    eeprom/eepromwb.cpp \
+    eeprom/eepromlsc.cpp \
+    eeprom/eeprompdafdcc.cpp \
+    eeprom/eeprompdaf2d.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -45,7 +53,15 @@ HEADERS += \
     sensor/exposurecontrolinfoconfig.h \
     sensor/streamsettingconfig.h \
     sensor/groupholdconfig.h \
-    sensor/testpatterninfoconfig.h
+    sensor/testpatterninfoconfig.h \
+    eeprom/eepromconfig.h \
+    eeprom/eepromslaveinfoconfig.h \
+    eeprom/memorymap.h \
+    eeprom/eepromaf.h \
+    eeprom/eepromwb.h \
+    eeprom/eepromlsc.h \
+    eeprom/eeprompdafdcc.h \
+    eeprom/eeprompdaf2d.h
 
 FORMS += \
         mainwindow.ui \
@@ -56,7 +72,15 @@ FORMS += \
     sensor/exposurecontrolinfoconfig.ui \
     sensor/streamsettingconfig.ui \
     sensor/groupholdconfig.ui \
-    sensor/testpatterninfoconfig.ui
+    sensor/testpatterninfoconfig.ui \
+    eeprom/eepromconfig.ui \
+    eeprom/eepromslaveinfoconfig.ui \
+    eeprom/memorymap.ui \
+    eeprom/eepromaf.ui \
+    eeprom/eepromwb.ui \
+    eeprom/eepromlsc.ui \
+    eeprom/eeprompdafdcc.ui \
+    eeprom/eeprompdaf2d.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

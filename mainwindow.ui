@@ -65,14 +65,14 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QCheckBox" name="checkBox_6">
+      <widget class="QCheckBox" name="selectNewPlatform">
        <property name="text">
         <string>new platform</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="checkBox_7">
+      <widget class="QCheckBox" name="selectOldPlatform">
        <property name="text">
         <string>old platform</string>
        </property>
@@ -93,7 +93,7 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0">
        <item>
-        <widget class="QCheckBox" name="checkBox">
+        <widget class="QCheckBox" name="isSupportSensor">
          <property name="text">
           <string>sensor</string>
          </property>
@@ -127,7 +127,7 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0,0">
        <item>
-        <widget class="QCheckBox" name="checkBox_2">
+        <widget class="QCheckBox" name="isSupportEeprom">
          <property name="text">
           <string>eeprom</string>
          </property>
@@ -161,7 +161,7 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0,0">
        <item>
-        <widget class="QCheckBox" name="checkBox_3">
+        <widget class="QCheckBox" name="isSupportActuator">
          <property name="text">
           <string>actuator</string>
          </property>
@@ -195,7 +195,7 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
-        <widget class="QCheckBox" name="checkBox_4">
+        <widget class="QCheckBox" name="isSupportPdaf">
          <property name="text">
           <string>pdaf</string>
          </property>
@@ -229,7 +229,7 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
-        <widget class="QCheckBox" name="checkBox_5">
+        <widget class="QCheckBox" name="isSupportModule">
          <property name="text">
           <string>module</string>
          </property>
@@ -273,7 +273,7 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="btn_report">
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
@@ -296,7 +296,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="btn_cancel">
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
