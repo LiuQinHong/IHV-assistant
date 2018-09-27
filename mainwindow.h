@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <sensor/sensorconfig.h>
 #include <eeprom/eepromconfig.h>
+#include <actuator/actuatorconfig.h>
 
 namespace Ui {
 class MainWindow;
@@ -26,10 +27,13 @@ private slots:
 
     void on_btn_cancel_clicked();
 
+    void on_btn_actuator_configure_clicked();
+
 private:
     Ui::MainWindow *ui;
     SensorConfig *mSensorConfig;
     EepromConfig *mEepromConfig;
+    ActuatorConfig *mActuatorConfig;
 };
 
 #endif // MAINWINDOW_H

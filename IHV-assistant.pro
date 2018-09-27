@@ -42,7 +42,8 @@ SOURCES += \
     eeprom/eepromwb.cpp \
     eeprom/eepromlsc.cpp \
     eeprom/eeprompdafdcc.cpp \
-    eeprom/eeprompdaf2d.cpp
+    eeprom/eeprompdaf2d.cpp \
+    actuator/actuatorconfig.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -61,7 +62,8 @@ HEADERS += \
     eeprom/eepromwb.h \
     eeprom/eepromlsc.h \
     eeprom/eeprompdafdcc.h \
-    eeprom/eeprompdaf2d.h
+    eeprom/eeprompdaf2d.h \
+    actuator/actuatorconfig.h
 
 FORMS += \
         mainwindow.ui \
@@ -80,7 +82,8 @@ FORMS += \
     eeprom/eepromwb.ui \
     eeprom/eepromlsc.ui \
     eeprom/eeprompdafdcc.ui \
-    eeprom/eeprompdaf2d.ui
+    eeprom/eeprompdaf2d.ui \
+    actuator/actuatorconfig.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

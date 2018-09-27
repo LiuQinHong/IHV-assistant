@@ -12,12 +12,14 @@ MainWindow::MainWindow(QWidget *parent) :
 
     mSensorConfig = new SensorConfig();
     mEepromConfig = new EepromConfig();
+    mActuatorConfig = new ActuatorConfig();
 }
 
 MainWindow::~MainWindow()
 {
     delete mSensorConfig;
     delete mEepromConfig;
+    delete mActuatorConfig;
     delete ui;
 }
 
@@ -42,6 +44,18 @@ void MainWindow::on_btn_eeprom_configure_clicked()
     mEepromConfig->show();
 }
 
+/* actuator config */
+void MainWindow::on_btn_actuator_configure_clicked()
+{
+    if (mActuatorConfig->isVisible()) {
+        mActuatorConfig->close();
+        return;
+    }
+    mActuatorConfig->show();
+}
+
+
+
 
 /* report */
 void MainWindow::on_btn_report_clicked()
@@ -54,5 +68,3 @@ void MainWindow::on_btn_cancel_clicked()
 {
     close();
 }
-
-
