@@ -2,6 +2,7 @@
 #define MEMORYMAP_H
 
 #include <QWidget>
+#include <QString>
 
 namespace Ui {
 class MemoryMap;
@@ -14,6 +15,7 @@ class MemoryMap : public QWidget
 public:
     explicit MemoryMap(QWidget *parent = 0);
     ~MemoryMap();
+    void writeText(QString& str);
 
 private:
     Ui::MemoryMap *ui;

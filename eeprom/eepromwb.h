@@ -2,6 +2,7 @@
 #define EEPROMWB_H
 
 #include <QWidget>
+#include <QString>
 
 namespace Ui {
 class EepromWB;
@@ -14,7 +15,7 @@ class EepromWB : public QWidget
 public:
     explicit EepromWB(QWidget *parent = 0);
     ~EepromWB();
-
+    void writeText(QString& str, bool isSupport);
 private:
     Ui::EepromWB *ui;
 };

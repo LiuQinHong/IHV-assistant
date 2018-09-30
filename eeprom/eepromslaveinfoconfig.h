@@ -2,6 +2,7 @@
 #define EEPROMSLAVEINFOCONFIG_H
 
 #include <QWidget>
+#include <QString>
 
 namespace Ui {
 class EepromslaveInfoConfig;
@@ -14,6 +15,8 @@ class EepromslaveInfoConfig : public QWidget
 public:
     explicit EepromslaveInfoConfig(QWidget *parent = 0);
     ~EepromslaveInfoConfig();
+    void writeText(QString& str);
+    QString getEepromName();
 
 private:
     Ui::EepromslaveInfoConfig *ui;

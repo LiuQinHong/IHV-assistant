@@ -2,6 +2,7 @@
 #define EEPROMAF_H
 
 #include <QWidget>
+#include <QString>
 
 namespace Ui {
 class EepromAF;
@@ -14,6 +15,7 @@ class EepromAF : public QWidget
 public:
     explicit EepromAF(QWidget *parent = 0);
     ~EepromAF();
+    void writeText(QString& str, bool isSupport);
 
 private:
     Ui::EepromAF *ui;

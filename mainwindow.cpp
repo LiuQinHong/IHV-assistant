@@ -20,11 +20,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
-    delete mSensorConfig;
-    delete mEepromConfig;
-    delete mActuatorConfig;
-    delete mPdafConfig;
-    delete mModuleConfig;
     delete ui;
 }
 
@@ -82,10 +77,35 @@ void MainWindow::on_btn_module_configure_clicked()
 /* report */
 void MainWindow::on_btn_report_clicked()
 {
+
+    if (!ui->isSupportSensor->isChecked() &&
+        !ui->isSupportEeprom->isChecked() &&
+        !ui->isSupportActuator->isChecked() &&
+        !ui->isSupportPdaf->isChecked() &&
+        !ui->isSupportModule->isChecked()) {
+        QMessageBox::warning(this, tr("warning"), tr("please select <sensor|eeprom|actuator|pdaf|module>"), QMessageBox::Yes, QMessageBox::Yes);
+        return;
+    }
+
+    if (ui->le_output_dir->text().isEmpty()) {
+        QMessageBox::warning(this, tr("warning"), tr("please select <output dir>"), QMessageBox::Yes, QMessageBox::Yes);
+        return;
+    }
+
+    if (!ui->selectNewPlatform->isChecked() &&
+        !ui->selectOldPlatform->isChecked()) {
+        QMessageBox::warning(this, tr("warning"), tr("please select <NewPlatform|OldPlatform>"), QMessageBox::Yes, QMessageBox::Yes);
+        return;
+    }
+
     /* new platfrom */
     if (ui->selectNewPlatform->isChecked()) {
         if (ui->isSupportActuator->isChecked()) {
             mActuatorConfig->generateActuatorFileForNew(ui->le_output_dir->text());
+        }
+
+        if (ui->isSupportEeprom->isChecked()) {
+            mEepromConfig->generateEepromFileForNew(ui->le_output_dir->text());
         }
 
     }
@@ -95,6 +115,11 @@ void MainWindow::on_btn_report_clicked()
         if (ui->isSupportActuator->isChecked()) {
             mActuatorConfig->generateActuatorFileForOld(ui->le_output_dir->text());
         }
+
+        if (ui->isSupportEeprom->isChecked()) {
+            mEepromConfig->generateEepromFileForOld(ui->le_output_dir->text());
+        }
+
     }
 
     QMessageBox::information(this, tr("succeed"), tr("report succeed"), QMessageBox::Yes, QMessageBox::Yes);
@@ -103,7 +128,17 @@ void MainWindow::on_btn_report_clicked()
 /* cancel */
 void MainWindow::on_btn_cancel_clicked()
 {
-    close();
+    int iRet;
+
+    iRet = QMessageBox::warning(this, tr("warning"), tr("Are you sure you want to exit the application?"), QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+    if (iRet == QMessageBox::Yes) {
+        delete mSensorConfig;
+        delete mEepromConfig;
+        delete mActuatorConfig;
+        delete mPdafConfig;
+        delete mModuleConfig;
+        close();
+    }
 }
 
 
@@ -116,6 +151,7 @@ void MainWindow::on_btn_check_clicked()
 /* GCDB cancel */
 void MainWindow::on_btn_cancel_gcdb_clicked()
 {
+    QMessageBox::warning(this, tr("warning"), tr("please select <NewPlatform|OldPlatform>"), QMessageBox::Yes, QMessageBox::Yes);
     close();
 }
 

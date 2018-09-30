@@ -1,5 +1,10 @@
 #include "eepromconfig.h"
 #include "ui_eepromconfig.h"
+#include <QFileDialog>
+#include <QDateTime>
+#include <QDebug>
+#include <QIODevice>
+#include <QTextStream>
 
 EepromConfig::EepromConfig(QWidget *parent) :
     QWidget(parent),
@@ -29,11 +34,6 @@ EepromConfig::~EepromConfig()
     delete mEepromPDAFDCC;
     delete mEepromPDAF2D;
     delete ui;
-}
-
-int EepromConfig::generateEepromFile()
-{
-
 }
 
 
@@ -104,4 +104,56 @@ void EepromConfig::on_btn_PDAF2D_clicked()
     }
 
     mEepromPDAF2D->show();
+}
+
+
+int EepromConfig::generateEepromFileForNew(const QString& outPutBasePath)
+{
+    QString fileName;
+    QString tmpStr = outPutBasePath;
+    QDir dir(outPutBasePath);
+    dir.mkpath("eeprom");
+
+
+#ifdef Q_OS_WIN
+    tmpStr +="\\eeprom\\";
+#endif
+
+#ifdef Q_OS_LINUX
+    tmpStr +="/eeprom/";
+#endif
+
+    fileName = QString("%1_eeprom.xml").arg(mEepromslaveInfoConfig->getEepromName());
+    tmpStr += fileName;
+    QFile outFile(tmpStr);
+    if (!outFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        qDebug()<<"open "<<tmpStr<<"error !";
+        return -1;
+    }
+
+    QTextStream fileOutPut(&outFile);
+    tmpStr = QString(EEPROM_HEAD).arg(QDateTime::currentDateTime().toString("yyyy"));
+
+    mEepromslaveInfoConfig->writeText(tmpStr);
+    mMemoryMap->writeText(tmpStr);
+
+    mEepromAF->writeText(tmpStr, ui->isSupportAF->isChecked());
+    mEepromWB->writeText(tmpStr, ui->isSupportWB->isChecked());
+    mEepromLSC->writeText(tmpStr, ui->isSupportLSC->isChecked());
+    tmpStr += QString(EEPROM_DUAL_CAMERA);
+    tmpStr += QString(EEPROM_SPC);
+    mEepromPDAFDCC->writeText(tmpStr, ui->isSupportPDAFDCC->isChecked());
+    mEepromPDAF2D->writeText(tmpStr, ui->isSupportPDAF2D->isChecked());
+    tmpStr += QString(EEPROM_END);
+
+    fileOutPut << tmpStr;
+
+    outFile.close();
+    return 0;
+}
+
+
+int EepromConfig::generateEepromFileForOld(const QString& outPutBasePath)
+{
+    return 0;
 }
