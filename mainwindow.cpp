@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include <QMessageBox>
+#include <QFileDialog>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -81,7 +82,22 @@ void MainWindow::on_btn_module_configure_clicked()
 /* report */
 void MainWindow::on_btn_report_clicked()
 {
+    /* new platfrom */
+    if (ui->selectNewPlatform->isChecked()) {
+        if (ui->isSupportActuator->isChecked()) {
+            mActuatorConfig->generateActuatorFileForNew(ui->le_output_dir->text());
+        }
 
+    }
+
+    /* old platfrom */
+    if (ui->selectOldPlatform->isChecked()) {
+        if (ui->isSupportActuator->isChecked()) {
+            mActuatorConfig->generateActuatorFileForOld(ui->le_output_dir->text());
+        }
+    }
+
+    QMessageBox::information(this, tr("succeed"), tr("report succeed"), QMessageBox::Yes, QMessageBox::Yes);
 }
 
 /* cancel */
@@ -101,4 +117,10 @@ void MainWindow::on_btn_check_clicked()
 void MainWindow::on_btn_cancel_gcdb_clicked()
 {
     close();
+}
+
+void MainWindow::on_btn_select_dir_clicked()
+{
+    QString path = QFileDialog::getExistingDirectory(this, tr("select output dir"), "./");
+    ui->le_output_dir->setText(path);
 }

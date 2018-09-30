@@ -39,6 +39,8 @@ private slots:
 
     void on_btn_cancel_gcdb_clicked();
 
+    void on_btn_select_dir_clicked();
+
 private:
     Ui::MainWindow *ui;
     SensorConfig *mSensorConfig;

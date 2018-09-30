@@ -74,7 +74,7 @@
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>280</y>
+        <y>290</y>
         <width>104</width>
         <height>51</height>
        </rect>
@@ -141,13 +141,13 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="layoutWidget_3">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>10</y>
-        <width>281</width>
-        <height>251</height>
+        <y>11</y>
+        <width>291</width>
+        <height>261</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -316,6 +316,27 @@
            </property>
            <property name="text">
             <string>configure...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>output dir</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="le_output_dir"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_select_dir">
+           <property name="text">
+            <string>select dir</string>
            </property>
           </widget>
          </item>

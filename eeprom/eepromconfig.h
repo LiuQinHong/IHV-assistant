@@ -21,6 +21,7 @@ class EepromConfig : public QWidget
 public:
     explicit EepromConfig(QWidget *parent = 0);
     ~EepromConfig();
+    int generateEepromFile();
 
 private slots:
     void on_btn_slaveInfo_clicked();

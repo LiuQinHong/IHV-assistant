@@ -31,6 +31,12 @@ EepromConfig::~EepromConfig()
     delete ui;
 }
 
+int EepromConfig::generateEepromFile()
+{
+
+}
+
+
 void EepromConfig::on_btn_slaveInfo_clicked()
 {
     if (mEepromslaveInfoConfig->isVisible()) {
