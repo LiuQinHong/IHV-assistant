@@ -14,7 +14,7 @@
         "  xsi:noNamespaceSchemaLocation=\"..\..\cdk\sensor\camxmoduleconfig.xsd\">\n"\
         "  <module_version major_revision=\"1\" minor_revision=\"0\" incr_revision=\"0\"/>\n"\
         "    <!--Module group can contain either 1 module or 2 modules\n"\
-        "      Dual camera, stereo camera use cases contain 2 modules in the group -->\n"
+        "      Dual camera, stereo camera use cases contain 2 modules in the group -->\n"\
 
 
 #define MODULE_INFO "  <moduleGroup>\n"\
@@ -86,6 +86,7 @@ class ModuleConfig : public QWidget
 public:
     explicit ModuleConfig(QWidget *parent = 0);
     ~ModuleConfig();
+    int generateModuleFileForNew(const QString& outPutBasePath);
 
 private:
     Ui::ModuleConfig *ui;

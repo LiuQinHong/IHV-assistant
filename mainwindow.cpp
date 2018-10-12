@@ -108,6 +108,14 @@ void MainWindow::on_btn_report_clicked()
             mEepromConfig->generateEepromFileForNew(ui->le_output_dir->text());
         }
 
+        if (ui->isSupportPdaf->isChecked()){
+            mPdafConfig->generatePdafFileForNew(ui->le_output_dir->text());
+        }
+
+        if (ui->isSupportModule->isChecked()){
+            mModuleConfig->generateModuleFileForNew(ui->le_output_dir->text());
+        }
+
     }
 
     /* old platfrom */
